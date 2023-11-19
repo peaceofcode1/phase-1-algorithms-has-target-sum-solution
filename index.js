@@ -1,5 +1,14 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    // Check for each pair
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true; // If a pair is found, return true
+      }
+    }
+  }
+  return false; // If no pairs are found, return false
 }
 
 /* 
